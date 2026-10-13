@@ -1,0 +1,1 @@
+"""Feature handlers — thin adapters between the engine and the outside world."""
