@@ -1,0 +1,49 @@
+[project]
+name = "stake-casino-prediction-bot"
+version = "0.4.2"
+description = "Desktop prediction engine for Stake casino games (Dice, Limbo, Keno, Plinko, Crash)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "stake-predict contributors" }]
+
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "structlog>=24.1",
+    "PyYAML>=6.0",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "customtkinter>=5.2",
+    "aiosqlite>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+stake-predict = "stake_predict.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stake_predict"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
