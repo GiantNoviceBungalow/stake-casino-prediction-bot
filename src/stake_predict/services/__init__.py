@@ -1,0 +1,1 @@
+"""External services: HTTP client and local persistence."""
