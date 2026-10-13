@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# App runtime artifacts
+logs/
+*.log
+data/cache/
+data/predictions.db
+data/rounds.sqlite3
+models/*.onnx
+models/*.pt
+models/*.ckpt
+
+# Secrets & config overrides
+.env
+config/local.yaml
+config/*.local.yaml
