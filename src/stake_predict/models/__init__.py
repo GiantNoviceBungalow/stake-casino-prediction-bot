@@ -1,0 +1,1 @@
+"""Typed models crossing module boundaries."""
